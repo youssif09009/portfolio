@@ -3,7 +3,6 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Stars, OrbitControls } from "@react-three/drei";
-import { Code, Image, ShoppingCart, Megaphone } from "lucide-react";
 import { motion } from "framer-motion";
 import Projects from "@/app/components/projects/page";
 import Skills from "@/app/components/skills/page";
@@ -82,12 +81,6 @@ function Planet() {
 
 // ----------------- Main Section -----------------
 export default function HomeSection() {
-    const roles = [
-        { title: "Programmer", icon: <Code size={34} /> },
-        { title: "Graphic Designer", icon: <Image size={34} /> },
-        { title: "Digital Marketer", icon: <Megaphone size={34} /> },
-        { title: "Media Buyer", icon: <ShoppingCart size={34} /> },
-    ];
 
     const scrollTo = (id: string) => {
         const el = document.getElementById(id);
@@ -147,41 +140,6 @@ export default function HomeSection() {
                 id="skills"
                 className="min-h-screen flex flex-col items-center w-full max-w-7xl px-4 sm:px-6 space-y-10 mx-auto mt-16 z-50 relative"
             >
-                <h3 className="text-amber-50 text-lg md:text-xl font-medium w-full text-center drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-                    Who Am I..?
-                </h3>
-
-                <span className="text-white text-md md:text-base font-bold self-start drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]">
-          I&apos;m A
-        </span>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 w-full justify-items-center">
-                    {roles.map((role) => (
-                        <div
-                            key={role.title}
-                            className="relative w-56 h-40 sm:w-60 md:w-64 md:h-40 bg-[#0a1f44]/40 rounded-xl flex flex-col items-center justify-center overflow-hidden shadow-lg transition-all duration-500"
-                        >
-                            <div
-                                className="absolute inset-0 rounded-xl p-[2px]"
-                                style={{
-                                    background:
-                                        "conic-gradient(from 0deg, #a855f7, #ec4899, #3b82f6, #a855f7)",
-                                    animation: "rotate 8s linear infinite",
-                                }}
-                            />
-                            <div className="absolute inset-0 rounded-xl bg-[#0a1f44]/80 backdrop-blur-sm" />
-                            <div className="relative z-10 w-full h-full flex flex-col items-center justify-center">
-                <span className="text-white text-lg md:text-xl font-bold mb-2 relative drop-shadow-[0_0_8px_rgba(255,255,255,0.9)]">
-                  {role.title}
-                </span>
-                                <div className="text-white relative drop-shadow-[0_0_12px_rgba(255,255,255,0.8)]">
-                                    {role.icon}
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
                 <div className="w-full mt-12 relative z-50">
                     <Skills />
                 </div>
