@@ -45,7 +45,6 @@ const projects: ProjectData[] = [
             '/assets/images/projects/demedia/Screenshot (101).png',
             '/assets/images/projects/demedia/Screenshot (102).png',
             '/assets/images/projects/demedia/Screenshot (103).png',
-            '/assets/images/projects/demedia/Screenshot (104).png',
             '/assets/images/projects/demedia/Screenshot (105).png'
         ]
     },
